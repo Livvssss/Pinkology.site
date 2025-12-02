@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creatiology - Pinkology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleabout_us.css">
+  <link rel="stylesheet" href="creatiologystyle.css">
+  <link rel="stylesheet" href="creatiologymenu.css">
+</head>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const dropdown = document.querySelector('.dropdown');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+dropdown.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  }
+});
+</script>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/imgs/2.png" alt="Logo Pinkology">
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="home.html">Início</a>
+      <a href="about_us.html">Sobre nós</a>
+
+      <div class="dropdown">
+        <a href="creatiology.html" class="dropbtn">Creatiology ▾</a>
+        <div class="dropdown-content">
+          <button onclick="mostrarPersonagem('barbie')">Barbie</button>
+          <button onclick="mostrarPersonagem('marie')">Gatinha Marie</button>
+          <button onclick="mostrarPersonagem('pinkie')">Pinkie Pie</button>
+          <button onclick="mostrarPersonagem('aurora')">Princesa Aurora</button>
+          <button onclick="mostrarPersonagem('penelope charmosa')">Penélope Charmosa</button>
+          <button onclick="mostrarPersonagem('Ursinha Animadinha')">Ursinha Animadinha</button>
+          <button onclick="mostrarPersonagem('pink-books')">Livros Rosa</button>
+        </div>
+      </div>
+
+      <a href="galeria.html" target="_blank">Galeria</a>
+      <a href="Nossa_Playlist.html" target="_blank">Nossa Playlist</a>
+    </nav>
+  </header>
+
+
+  <section class="about-us">
+    <!-- Barbie -->
+    <div id="barbie" class="about-block personagem ativo">
+      <div class="about-text">
+        <h1>Barbie</h1>
+        <p>A Barbie é muito mais que uma boneca: ela é um ícone cultural que representa estilo, liberdade e criatividade. Desde sua estreia em 1959, Barbie tem inspirado gerações a sonhar grande e explorar diferentes caminhos, mostrando que é possível ser tudo o que se deseja — do mundo da moda às carreiras mais ousadas.</p>
+        <p>No universo da Barbie, o rosa é a cor que simboliza confiança, charme e originalidade. Ela usa essa cor para expressar personalidade, seja em roupas, acessórios ou no próprio design de seu mundo. Mais do que um brinquedo, Barbie é um símbolo de empoderamento e expressão pessoal, encorajando todos a abraçarem quem são com estilo e leveza.</p>
+        <p>Além disso, a Barbie estimula a criatividade: cada boneca, cada cenário e cada história são convites para inventar mundos, contar histórias e imaginar possibilidades infinitas. Assim como no Pinkology, o universo da Barbie mostra que a vida pode ser divertida, colorida e cheia de ideias, sempre com uma pitada de rosa e muita personalidade.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Barbie (1).png" alt="Imagem 1">
+          <img src="img/imgs/Barbie (2).png" alt="Imagem 2">
+        </div>
+        <div class="gallery-row">
+          <img src="img/imgs/Barbie (3).png" alt="Imagem 3">
+          <img src="img/imgs/Barbie.6.png" alt="Imagem 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Gatinha Marie -->
+    <div id="marie" class="about-block personagem">
+      <div class="about-text">
+        <h1>Gatinha Marie</h1>
+        <p>Marie é a doce gatinha branca de “Aristogatas”, conhecida por sua personalidade charmosa, elegante e cheia de atitude. Desde sua estreia nos clássicos da Disney, Marie conquistou corações ao representar graça, confiança e delicadeza, mostrando que até os pequenos gestos podem ter grande estilo.</p>
+        <p>No universo da Marie, o rosa é a cor da fofura e da sofisticação, refletida em seu laço rosa icônico e em sua postura delicada. Ela ensina que é possível ser amável e confiante ao mesmo tempo, combinando charme e personalidade.</p>
+        <p>Além disso, Marie inspira criatividade e imaginação: crianças e fãs podem inventar histórias, desenhar cenários e se divertir com sua presença graciosa. Assim como o Pinkology celebra o rosa como expressão de estilo, arte e diversão, a Gatinha Marie é uma referência de elegância e ternura, mostrando que o rosa também pode ser sofisticado e cheio de personalidade.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Marie.png" alt="Imagem 1">
+          <img src="img/imgs/Marie (1).png" alt="Imagem 2">
+        </div>
+        <div class="gallery-row">
+          <img src="img/imgs/Marie (4).png" alt="Imagem 1">
+          <img src="img/imgs/Marie (2).png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Pinkie Pie -->
+    <div id="pinkie" class="about-block personagem">
+      <div class="about-text">
+        <h1>Pinkie Pie</h1>
+        <p>Pinkie Pie é a ponteira da diversão e da alegria no mundo de My Little Pony. Conhecida por seu humor contagiante, energia infinita e amor por festas, ela representa criatividade, entusiasmo e espontaneidade. Desde sua estreia, Pinkie Pie inspira todos a encontrarem alegria nas pequenas coisas e a celebrarem cada momento com intensidade.</p>
+        <p>No universo da Pinkie Pie, o rosa é a cor da felicidade e da imaginação, refletida em sua crina vibrante e em suas roupas e acessórios lúdicos. Ela ensina que ser criativo e ousado é uma forma de se expressar e espalhar positividade.</p>
+        <p>Além de diversão, Pinkie Pie estimula a criatividade e a colaboração: inventar histórias, decorar festas e criar brincadeiras são atividades que despertam o imaginário, reforçando que a vida pode ser divertida, colorida e cheia de possibilidades, sempre com uma pitada de rosa e muita personalidade.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Pinkie Pie.png" alt="Imagem 1">
+          <img src="img/imgs/Pinkie Pie (1).png" alt="Imagem 2">
+        </div>
+          <div class="gallery-row">
+          <img src="img/imgs/Pinkie Pie (2).png" alt="Imagem 1">
+          <img src="img/imgs/Pinkie Pie (3).png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Princesa Aurora -->
+    <div id="aurora" class="about-block personagem">
+      <div class="about-text">
+        <h1>Princesa Aurora</h1>
+        <p>A Princesa Aurora é um símbolo de elegância, graça e delicadeza no universo Disney. Desde sua estreia em A Bela Adormecida, Aurora encantou gerações com sua gentileza, charme e postura real, mostrando que a verdadeira nobreza vem tanto da aparência quanto do coração.</p>
+        <p>No mundo de Aurora, o rosa é a cor da serenidade e da magia, refletida em seu icônico vestido rosa e nos elementos encantados que cercam sua história. Ela ensina que é possível combinar beleza, elegância e força interior, tornando cada gesto e decisão significativos e memoráveis.</p>
+        <p>Além disso, Aurora inspira criatividade e imaginação: cenários mágicos, castelos e contos de fadas oferecem espaço para criar histórias, desenhar aventuras e explorar mundos encantados. Assim como o Pinkology celebra o rosa como símbolo de estilo e fantasia, a Princesa Aurora mostra que o rosa também é sinônimo de encanto, delicadeza e imaginação sem limites.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Aurora.1.png" alt="Imagem 1">
+          <img src="img/imgs/Aurora.2.png" alt="Imagem 2">
+        </div>
+        <div class="gallery-row">
+          <img src="img/imgs/Aurora.3.png" alt="Imagem 1">
+          <img src="img/imgs/Aurora.png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Penélope Charmosa -->
+    <div id="penelope charmosa" class="about-block personagem">
+      <div class="about-text">
+        <h1>Penélope Charmosa</h1>
+        <p>Penélope Charmosa é o ícone da elegância veloz e do charme em movimento. Conhecida por seu carro cor-de-rosa e seu estilo impecável, ela conquistou gerações desde sua estreia em Corrida Maluca — sempre mostrando que feminilidade e coragem podem andar lado a lado, inclusive em alta velocidade.</p>
+        <p>No universo de Penélope, o rosa é mais do que uma cor — é uma atitude. É o símbolo da confiança, da inteligência e da graciosidade que ela carrega em cada corrida, provando que é possível ser ousada e refinada ao mesmo tempo. Sua combinação de delicadeza e determinação inspira todos a correrem atrás dos próprios sonhos com estilo e personalidade.</p>
+        <p>Além disso, Penélope Charmosa representa a criatividade no modo mais vibrante: seja em suas invenções, acessórios ou estratégias engenhosas nas pistas, ela transforma desafios em oportunidades para brilhar. Assim como o Pinkology, Penélope mostra que o rosa é a cor da originalidade, da coragem e do poder de ser autenticamente você — mesmo quando o mundo está em alta velocidade.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Penélope Charmosa (1).png" alt="Imagem 1">
+          <img src="img/imgs/Penélope Charmosa (2).png" alt="Imagem 2">
+        </div>
+        <div class="gallery-row">
+          <img src="img/imgs/Penélope Charmosa (3).png" alt="Imagem 1">
+          <img src="img/imgs/Penélope Charmosa (4).png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Ursinha Animadinha -->
+    <div id="Ursinha Animadinha" class="about-block personagem">
+      <div class="about-text">
+        <h1>Ursinha Animadinha</h1>
+        <p>A Ursinha Animadinha é o puro reflexo da alegria em forma de ternura. Com seu pelo rosa vibrante e o arco-íris estampado no peito, ela representa a energia positiva, a esperança e o poder de transformar dias comuns em momentos especiais. Desde sua estreia nos Ursinhos Carinhosos, Animadinha encanta com seu sorriso contagiante e sua habilidade de espalhar amor por onde passa.</p>
+        <p>No universo da Ursinha Animadinha, o rosa é mais do que uma cor — é o brilho da empatia e da felicidade compartilhada. Ela mostra que ser gentil, otimista e acolhedor é uma forma poderosa de criatividade emocional, capaz de colorir o mundo e aquecer corações.</p>
+        <p>Assim como o Pinkology, a Ursinha Animadinha celebra o rosa como um símbolo de amor e expressão. Seu arco-íris é a tradução perfeita do que significa viver com imaginação e carinho, lembrando a todos que a verdadeira beleza está em ver o lado alegre da vida — sempre com um toque de rosa e um sorriso no rosto.</p>
+      </div>
+      <div class="about-gallery">
+        <div class="gallery-row">
+          <img src="img/imgs/Ursinha Animadinha (1).png" alt="Imagem 1">
+          <img src="img/imgs/Ursinha Animadinha (2).png" alt="Imagem 2">
+        </div>
+        <div class="gallery-row">
+          <img src="img/imgs/Ursinha Animadinha (3).png" alt="Imagem 1">
+          <img src="img/imgs/Ursinha Animadinha (4).png" alt="Imagem 2">
+        </div>
+      </div>
+    </div>
+
+     <!--LIVROS -->
+    <div id="pink-books" class="about-block personagem">
+      <div class="about-text">
+        <h1>Livros que Exalam a Estética Rosa 📚✨</h1>
+        <p>Histórias que encantam, inspiram e fazem o coração bater cor-de-rosa.  
+        Cada um desses livros carrega um toque de delicadeza, sonhos e criatividade — perfeitos para quem vive a vida com brilho e imaginação.</p>
+        <p>Essas obras traduzem o universo Pinkology em palavras: elegância, feminilidade e poder criativo.  
+        São leituras que transformam o simples ato de folhear páginas em uma experiência doce e cintilante.</p>
+      </div>
+
+      <div class="about-gallery book-gallery">
+        <div class="gallery-row">
+          <div class="book-card">
+            <img src="img/imgs/Bee e Levi.png" alt="A razão do amor - Ali Hazelwood">
+            <h2>A razão do amor</h2>
+            <p>Bee e Levi descobrem um amor delicado e vibrante, como o rosa, que floresce entre ciência, confiança e parceria.</p>
+          </div>
+          <div class="book-card">
+            <img src="img/imgs/Jacks e Evangeline.png" alt="Era uma vez um coração partido - Stephanie Garber">
+            <h2>Era uma vez um coração partido</h2>
+            <p>Evangeline faz um pacto com Jacks para salvar seu amor, mas descobre que desejos têm preço alto.</p>
+          </div>
+        </div>
+
+        <div class="gallery-row">
+          <div class="book-card">
+            <img src="img/imgs/Lily e Atlas.png" alt="É assim que começa - Colleen Hoover">
+            <h2>É assim que começa</h2>
+            <p>Lily reencontra Atlas e descobre que o amor verdadeiro pode nascer de segundas chances.</p>
+          </div>
+          <div class="book-card">
+            <img src="img/imgs/Rue e Eli.png" alt="Não é amor - Ali Hazelwood">
+            <h2>Não é amor</h2>
+            <p>Rue e Eli se envolvem em um jogo secreto, onde a química entre eles desafia as regras da lealdade e da razão. Um romance intenso, onde o amor e a ciência se encontram.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pinkology — Seu mundinho rosa</p>
+  </footer>
+
+  <script>
+    function mostrarPersonagem(id) {
+      document.querySelectorAll('.personagem').forEach(div => div.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+    }
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+});
+</script>
+</body>
+<audio id="pinkPlayer" preload="auto"></audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎶</button>
+
+<script>
+  // Lista das músicas
+  const playlist = [
+  "músicas/Taylor-Swift-Lover-_Official-Music-Video_.mp3",
+  "músicas/Lovers-[xmSk54-3tlA].mp3",
+  "músicas/Taylor-Swift-Paper-Rings-_Official-Audio_.mp3"
+];
+
+  let currentSong = 0;
+  const player = document.getElementById("pinkPlayer");
+
+  // Toca a primeira música
+  function playMusic() {
+    player.src = playlist[currentSong];
+    player.play();
+  }
+
+  // Botão de play/pause
+  function toggleMusic() {
+    if (player.paused && player.src) {
+      player.play();
+    } else if (player.src) {
+      player.pause();
+    } else {
+      playMusic();
+    }
+  }
+
+  // Quando a música termina → vai para a próxima
+  player.addEventListener("ended", () => {
+    currentSong++;
+    if (currentSong >= playlist.length) {
+      currentSong = 0; // volta ao início da lista
+    }
+    playMusic();
+  });
+</script>
+
+
+</html>

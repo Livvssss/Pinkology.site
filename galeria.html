@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinkology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="creatiologymenu.css">
+  <link rel="stylesheet" href="pinkvision.css"
+</head>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const dropdown = document.querySelector('.dropdown');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+dropdown.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  }
+});
+</script>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/imgs/2.png" alt="Logo Pinkology">
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="home.html" target="_blank">Início</a>
+      <a href="about_us.html" target="_blank">Sobre nós</a>
+
+      <div class="dropdown">
+        <a href="creatiology.html" class="dropbtn">Creatiology ▾</a>
+        <div class="dropdown-content">
+          <button onclick="mostrarPersonagem('barbie')">Barbie</button>
+          <button onclick="mostrarPersonagem('marie')">Gatinha Marie</button>
+          <button onclick="mostrarPersonagem('pinkie')">Pinkie Pie</button>
+          <button onclick="mostrarPersonagem('aurora')">Princesa Aurora</button>
+          <button onclick="mostrarPersonagem('penelope charmosa')">Penélope Charmosa</button>
+          <button onclick="mostrarPersonagem('Ursinha Animadinha')">Ursinha Animadinha</button>
+          <button onclick="mostrarPersonagem('pink-books')">Livros Rosa</button>
+        </div>
+      </div>
+
+      <a href="galeria.html" target="_blank">Galeria</a>
+      <a href="Nossa_Playlist.html" target="_blank">Nossa Playlist</a>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+  <h1 class="pink-gradient">Pink Vision</h1>
+  <p class="gallery-desc">
+    Um universo onde cada personagem brilha em seu próprio tom de rosa ✨
+    <br>Deixe-se encantar pela magia das nossas ícones pink!
+  </p>
+
+<div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="img/imgs/barbie.png" alt="Barbie">
+    <div class="caption">Barbie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/marie.png" alt="Gatinha Marie">
+    <div class="caption">Gatinha Marie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/PINKIE PIEE.2.png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/aurora.png" alt="Princesa Aurora">
+    <div class="caption">Princesa Aurora</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Penélope Charmosa (2).png" alt="Penélope Charmosa">
+    <div class="caption">Penélope Charmosa</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Ursinha animadinha (1).png" alt="Ursinha Animadinha">
+    <div class="caption">Ursinha Animadinha</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Taylor - Lover.png" alt="Taylor Swift">
+    <div class="caption">Tarlor Swift - Era Lover</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Moranguinho.png" alt="Moranguinho">
+    <div class="caption">Moranguinho</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Barbie (2).png" alt="Barbie Princesa Catarina">
+    <div class="caption">Barbie - Princesa Catarina</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Moranguinho.2.png" alt="Moranguinho">
+    <div class="caption">Moranguinho</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Aurora.1.png" alt="Princesa Aurora">
+    <div class="caption">Princesa Aurora</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Aurora.2.png" alt="Princesa Aurora">
+    <div class="caption">Princesa Aurora</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Aurora.3.png" alt="Princesa Aurora">
+    <div class="caption">Princesa Aurora</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Barbie (1).png" alt="Barbie">
+    <div class="caption">Barbie Butterfly</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Barbie (3).png" alt="Barbie">
+    <div class="caption">Barbie - Rosella</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Barbie (4).png" alt="Barbie">
+    <div class="caption">Barbie - Life in the dreamhouse</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Barbie.6.png" alt="Barbie">
+    <div class="caption">Barbie - A princesa e a plebeia</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Giselle.png" alt="Giselle">
+    <div class="caption">Giselle</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Marie (1).png" alt="Gatinha Marie">
+    <div class="caption">Gatinha Marie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Marie (2).png" alt="Gatinha Marie">
+    <div class="caption">Gatinha Marie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Marie (4).png" alt="Gatinha Marie">
+    <div class="caption">Gatinha Marie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Penélope Charmosa (1).png" alt="Penélope Charmosa">
+    <div class="caption">Penélope Charmosa</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Penélope Charmosa (3).png" alt="Penélope Charmosa">
+    <div class="caption">Penélope Charmosa</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Penélope Charmosa (4).png" alt="Penélope Charmosa">
+    <div class="caption">Penélope Charmosa</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkepie.png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkie Pie (1).png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkie Pie (2).png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkie Pie (3).png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkie Pie.png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkie Piee.png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Pinkpie.png" alt="Pinkie Pie">
+    <div class="caption">Pinkie Pie</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Taylor.png" alt="Taylor Swift">
+    <div class="caption">Taylor Swift</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Ursinha animadinha (2).png" alt="Ursinha Animadinha">
+    <div class="caption">Ursinha Animadinha</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Ursinha animadinha (3).png" alt="Ursinha Animadinha">
+    <div class="caption">Ursinha Animadinha</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Ursinha animadinha (4).png" alt="Ursinha Animadinha">
+    <div class="caption">Ursinha Animadinha</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Ursinhos Carinhosos.png" alt="Ursinha Animadinha">
+    <div class="caption">Ursinha Animadinha</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Giselle.1.png" alt="Giselle">
+    <div class="caption">Giselle</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Giselle.2.png" alt="Giselle">
+    <div class="caption">Giselle</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Giselle.3.png" alt="Giselle">
+    <div class="caption">Giselle</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Moranguinho.3.png" alt="Moranguinho">
+    <div class="caption">Moranguinho</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Moranguinho.4.png" alt="Moranguinho">
+    <div class="caption">Moranguinho</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Lottie.png" alt="Lottie">
+    <div class="caption">Lottie - Princesa e o sapo</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Lottie.1.png" alt="Lottie">
+    <div class="caption">Lottie - Princesa e o sapo</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="img/imgs/Lambie.png" alt="Lambie">
+    <div class="caption">Lambie - Doutora brinquedos</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Rosetta - Tinker Bell.png" alt="Roseta">
+    <div class="caption">Roseta - Tinker Bell</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Rosetta - Tinker Bell (2).png" alt="Roseta">
+    <div class="caption">Roseta - Tinker Bell</div>
+  </div><div class="gallery-item">
+    <img src="img/imgs/Rosetta - Tinker Bell (3).png" alt="Roseta">
+    <div class="caption">Roseta - Tinker Bell</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Mia - O Íncrivel Mundo De Mia.png" alt="Mia">
+    <div class="caption">Mia - O mundo de Mia</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony.png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony (2).png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony (3).png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony (4).png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony (5).png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Fluttershy - My Little Pony (6).png" alt="Fluttershy">
+    <div class="caption">Fluttershy - My little pony</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Draculaura - Monster High.png" alt="Draculaura">
+    <div class="caption">Draculaura - Monster High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Draculaura - Monster High (2).png" alt="Draculaura">
+    <div class="caption">Draculaura - Monster High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Draculaura - Monster High (3).png" alt="Draculaura">
+    <div class="caption">Draculaura - Monster High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Draculaura - Monster High (4).png" alt="Draculaura">
+    <div class="caption">Draculaura - Monster High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Elly - Pocoyo.png" alt="Elly">
+    <div class="caption">Elly - Pocoyo</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High.png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (2).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (3).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (4).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (5).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (6).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (7).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/C.A Cupid -Ever After High (8).png" alt="C.A Cupid">
+    <div class="caption">C.A Cupid - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Framboesa - Moranguinho.png" alt="Framboesa">
+    <div class="caption">Framboesa - Moranguinho</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Framboesa - Moranguinho (2).png" alt="Framboesa">
+    <div class="caption">Framboesa - Moranguinho</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Framboesa - Moranguinho (3).png" alt="Framboesa">
+    <div class="caption">Framboesa - Moranguinho</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Briar Beauty - Ever After High.png" alt="Briar Beauty">
+    <div class="caption">Briar Beauty - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Briar Beauty - Ever After High (2).png" alt="Briar Beauty">
+    <div class="caption">Briar Beauty - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Ashlynn Ella - Ever After High.png" alt="Ashlynn Ella">
+    <div class="caption">Ashlynn Ella - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Ashlynn Ella - Ever After High (2).png" alt="Ashlynn Ella">
+    <div class="caption">Ashlynn Ella - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Ashlynn Ella - Ever After High (3).png" alt="Ashlynn Ella">
+    <div class="caption">Ashlynn Ella - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Ashlynn Ella - Ever After High (4).png" alt="Ashlynn Ella">
+    <div class="caption">Ashlynn Ella - Ever After High</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Olive e Adam.png" alt="Olive e Adam">
+    <div class="caption">Olive e Adam - A Hipótese do Amor</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Bee e Levi.png" alt="Bee e Levi">
+    <div class="caption">Bee e Levi - A Razão do Amor</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Charlie e Bailey.png" alt="Charlie e Bailey">
+    <div class="caption">Charlie e Bailey - Apostando no amor</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Eli e Sage.png" alt="Elias e Sage">
+    <div class="caption">Elias e Sage</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Lily e Atlas.png" alt="Lily e Atlas">
+    <div class="caption">Lily e Atlas - É Assim que Acaba e É Assim que Começa</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Nathan e Bree.png" alt="Nathan e Bree">
+    <div class="caption">Nathan e Bree - As Táticas do Amor</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Poppy e Rune.png" alt="Poppy e Rune">
+    <div class="caption">Poppy e Rune - Mil Beijos de Garoto</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Rue e Eli.png" alt="Rue e Eli">
+    <div class="caption">Rue e Eli - Não é Amor</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Trystan e Evie.png" alt="Trystan e Evie">
+    <div class="caption">Trystan e Evie - Assistente do Vilão, Aprendiz do Vilão e Aliada do Vilão...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jacks e Evangeline.png" alt="Jacks e Evangeline">
+    <div class="caption">Jacks e Evangeline - Era uma Vez um Coração Partido...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jacks e Evangeline - Era uma vez um coração partido.png" alt="Jacks e Evangeline">
+    <div class="caption">Jacks e Evangeline - Era uma Vez um Coração Partido...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jacks e Evangeline - Era uma vez um coração partido (2).png" alt="Jacks e Evangeline">
+    <div class="caption">Jacks e Evangeline - Era uma Vez um Coração Partido...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jacks e Evangeline - Era uma vez um coração partido (3).png" alt="Jacks e Evangeline">
+    <div class="caption">Jacks e Evangeline - Era uma Vez um Coração Partido...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jacks e Evangeline - Era uma vez um coração partido (4).png" alt="Jacks e Evangeline">
+    <div class="caption">Jacks e Evangeline - Era uma Vez um Coração Partido...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Cardan e Jude.png" alt="Jude e Cardan">
+    <div class="caption">Jude e Cardan - O Príncipe Cruel...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jude e Cardan - Príncipe Cruel.png" alt="Jude e Cardan">
+    <div class="caption">Jude e Cardan - O Príncipe Cruel...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jude e Cardan - Príncipe Cruel (2).png" alt="Jude e Cardan">
+    <div class="caption">Jude e Cardan - O Príncipe Cruel...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jude e Cardan - Príncipe Cruel (3).png" alt="Jude e Cardan">
+    <div class="caption">Jude e Cardan - O Príncipe Cruel...</div>
+  </div>
+  <div class="gallery-item">
+    <img src="img/imgs/Jude e Cardan - Príncipe Cruel (4).png" alt="Jude e Cardan">
+    <div class="caption">Jude e Cardan - O Príncipe Cruel...</div>
+  </div>
+</div>
+
+</section>
+
+  <footer>
+    <p>&copy; 2025 Pinkology — Seu mundinho rosa</p>
+  </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+});
+</script>
+<audio id="pinkPlayer" preload="auto"></audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎶</button>
+
+<script>
+  // Lista das músicas
+  const playlist = [
+  "músicas/Taylor-Swift-Lover-_Official-Music-Video_.mp3",
+  "músicas/Lovers-[xmSk54-3tlA].mp3",
+  "músicas/Taylor-Swift-Paper-Rings-_Official-Audio_.mp3"
+];
+
+  let currentSong = 0;
+  const player = document.getElementById("pinkPlayer");
+
+  // Toca a primeira música
+  function playMusic() {
+    player.src = playlist[currentSong];
+    player.play();
+  }
+
+  // Botão de play/pause
+  function toggleMusic() {
+    if (player.paused && player.src) {
+      player.play();
+    } else if (player.src) {
+      player.pause();
+    } else {
+      playMusic();
+    }
+  }
+
+  // Quando a música termina → vai para a próxima
+  player.addEventListener("ended", () => {
+    currentSong++;
+    if (currentSong >= playlist.length) {
+      currentSong = 0; // volta ao início da lista
+    }
+    playMusic();
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const explorarBtn = document.getElementById("explorar-btn");
+  let pinkAtivo = false; // controla se o modo pink está ligado
+
+  if (explorarBtn) {
+    explorarBtn.addEventListener("click", function() {
+      if (!pinkAtivo) {
+        document.body.style.background = "linear-gradient(270deg, #ff7ab8, #ffb6d9, #ffe6f0)";
+        document.body.style.backgroundSize = "400% 400%";
+        document.body.style.animation = "pinkFlow 8s ease infinite";
+        document.body.style.transition = "all 1s ease";
+        explorarBtn.textContent = "Voltar ao fundo original 💗";
+        pinkAtivo = true;
+      } else {
+        document.body.style.background = "#ffe6f0";
+        document.body.style.animation = "none";
+        explorarBtn.textContent = "Explorar o universo Pink";
+        pinkAtivo = false;
+      }
+    });
+  }
+
+  const style = document.createElement("style");
+  style.textContent = `
+  @keyframes pinkFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }`;
+  document.head.appendChild(style);
+});
+</script>
+</html>

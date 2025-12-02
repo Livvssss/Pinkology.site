@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinkology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="creatiologymenu.css">
+  <link rel="stylesheet" href="nossaplaylist.css">
+</head>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const dropdown = document.querySelector('.dropdown');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+dropdown.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  }
+});
+</script>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/imgs/2.png" alt="Logo Pinkology">
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="home.html" target="_blank">Início</a>
+      <a href="about_us.html" target="_blank">Sobre nós</a>
+
+      <div class="dropdown">
+        <a href="creatiology.html" class="dropbtn">Creatiology ▾</a>
+        <div class="dropdown-content">
+          <button onclick="mostrarPersonagem('barbie')">Barbie</button>
+          <button onclick="mostrarPersonagem('marie')">Gatinha Marie</button>
+          <button onclick="mostrarPersonagem('pinkie')">Pinkie Pie</button>
+          <button onclick="mostrarPersonagem('aurora')">Princesa Aurora</button>
+          <button onclick="mostrarPersonagem('penelope charmosa')">Penélope Charmosa</button>
+          <button onclick="mostrarPersonagem('Ursinha Animadinha')">Ursinha Animadinha</button>
+          <button onclick="mostrarPersonagem('pink-books')">Livros Rosa</button>
+        </div>
+      </div>
+
+      <a href="galeria.html" target="_blank">Galeria</a>
+      <a href="Nossa_Playlist.html" target="_blank">Nossa Playlist</a>
+    </nav>
+  </header>
+
+  <section class="playlist-section">
+  <h1 class="pink-gradient">🎧Nossa Playlist Rosa</h1>
+ <p class="playlist-desc">Passe o mouse para assistir — clique no botão para ativar o som!</p>
+
+  <button id="enable-sound" class="sound-btn">🔊Ativar Som</button>
+
+  <div class="playlist-grid">
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - Lover (Official Music Video).mp4" muted></video>
+      <h2>Lover - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Anna of the North - Lovers (from To All the Boys I've Loved Before).mp4" muted></video>
+      <h2>Lovers - Anna of the North</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - Paper Rings (Official Audio).mp4" muted></video>
+      <h2>Paper Rings - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Lana Del Rey - Margaret (Audio) ft. Bleachers.mp4" muted></video>
+      <h2>Margaret - Lana Del Rey ft. Bleachers</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Out Of The Woods (Taylor's Version).mp4" muted></video>
+      <h2>Out of the woods (Taylor's Version) - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - Daylight (Official Audio).mp4" muted></video>
+      <h2>Daylight - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Billie Eilish - Halley’s Comet (Official Lyric Video).mp4" muted></video>
+      <h2>Halley's Comet - Billie Eilish</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - _Slut!_ (Taylor's Version) (From The Vault) (Lyric Video).mp4" muted></video>
+      <h2>Slut! (Taylor's Version) - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Wi$h Li$t (Settled Down Acoustic Version).mp4" muted></video>
+      <h2>Wi$hli$t (Settled Down Acoustic Version) - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - Love Story.mp4" muted></video>
+      <h2>Love Story - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp4" muted></video>
+      <h2>Enchanted (Taylor's Version) - Taylor Swift</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Lauv - I Like Me Better [Official Audio].mp4" muted></video>
+      <h2>I Like Me Better - Lauv</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Sixpence None The Richer - Kiss Me (Official Music Video).mp4" muted></video>
+      <h2>Kiss Me - Sixpence None The Richer</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/The Neighbourhood - Baby Came Home 2 _ Valentines.mp4" muted></video>
+      <h2>Baby Came Home 2 / Valentines - The Neighbourhood</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Lana Del Rey - White Mustang (Official Music Video).mp4" muted></video>
+      <h2>White Mustang - Lana Dey Rey</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/The Neighbourhood - Nervous (Letra_Legenda).mp4" muted></video>
+      <h2>Nervous - The Neighbourhood</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/The Neighbourhood - You Get Me So High (Official Audio).mp4" muted></video>
+      <h2>You Get Me So High - The Neighbourhood</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Kaash Paige - Love Songs  (Official Music Video).mp4" muted></video>
+      <h2>Love Songs - Kaash Paige</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Miguel - Sure Thing.mp4" muted></video>
+      <h2>Sure Thing - Miguel</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Lana Del Rey - Chemtrails Over The Country Club (Official Music Video).mp4" muted></video>
+      <h2>Chemtrails Over The Country Club - Lana Del Rey</h2>
+    </div>
+    <div class="music-card">
+      <video src="músicas/videoclipes/Apocalypse - Cigarettes After Sex.mp4" muted></video>
+      <h2>Apocalypse - Cigarettes After Sex</h2>
+    </div>
+  </div>
+</section>
+
+<script>
+  const videos = document.querySelectorAll('.music-card video');
+  let soundEnabled = false;
+
+  // Botão para liberar o som
+  document.getElementById('enable-sound').addEventListener('click', () => {
+    soundEnabled = true;
+    videos.forEach(v => v.muted = false);
+    alert("Som ativado! Agora os vídeos terão áudio 🎶");
+  });
+
+  // Play e pause com hover
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => video.play());
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+  <footer>
+    <p>&copy; 2025 Pinkology — Seu mundinho rosa</p>
+  </footer>
+  <script>
+    function mostrarPersonagem(id) {
+      document.querySelectorAll('.personagem').forEach(div => div.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+    }
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+});
+</script>
+<audio id="pinkPlayer" preload="auto"></audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎶</button>
+
+<script>
+  // Lista das músicas
+  const playlist = [
+  "músicas/Taylor-Swift-Lover-_Official-Music-Video_.mp3",
+  "músicas/Lovers-[xmSk54-3tlA].mp3",
+  "músicas/Taylor-Swift-Paper-Rings-_Official-Audio_.mp3"
+];
+
+  let currentSong = 0;
+  const player = document.getElementById("pinkPlayer");
+
+  // Toca a primeira música
+  function playMusic() {
+    player.src = playlist[currentSong];
+    player.play();
+  }
+
+  // Botão de play/pause
+  function toggleMusic() {
+    if (player.paused && player.src) {
+      player.play();
+    } else if (player.src) {
+      player.pause();
+    } else {
+      playMusic();
+    }
+  }
+
+  // Quando a música termina → vai para a próxima
+  player.addEventListener("ended", () => {
+    currentSong++;
+    if (currentSong >= playlist.length) {
+      currentSong = 0; // volta ao início da lista
+    }
+    playMusic();
+  });
+</script>
+
+</body>
+</html>

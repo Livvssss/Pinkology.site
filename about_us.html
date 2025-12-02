@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinkology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleabout_us.css">
+  <link rel="stylesheet" href="creatiologymenu.css">
+</head>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const dropdown = document.querySelector('.dropdown');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+dropdown.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  }
+});
+</script>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/imgs/2.png" alt="Logo Pinkology">
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="home.html" target="_blank">Início</a>
+      <a href="about_us.html" target="_blank">Sobre nós</a>
+
+      <div class="dropdown">
+        <a href="creatiology.html" class="dropbtn">Creatiology ▾</a>
+        <div class="dropdown-content">
+          <button onclick="mostrarPersonagem('barbie')">Barbie</button>
+          <button onclick="mostrarPersonagem('marie')">Gatinha Marie</button>
+          <button onclick="mostrarPersonagem('pinkie')">Pinkie Pie</button>
+          <button onclick="mostrarPersonagem('aurora')">Princesa Aurora</button>
+          <button onclick="mostrarPersonagem('penelope charmosa')">Penélope Charmosa</button>
+          <button onclick="mostrarPersonagem('Ursinha Animadinha')">Ursinha Animadinha</button>
+          <button onclick="mostrarPersonagem('pink-books')">Livros Rosa</button>
+        </div>
+      </div>
+
+      <a href="galeria.html" target="_blank">Galeria</a>
+      <a href="Nossa_Playlist.html" target="_blank">Nossa Playlist</a>
+    </nav>
+  </header>
+
+  <section class="about-us">
+    <div class="about-text">
+      <h1>Sobre o Pinkology</h1>
+      <p>
+        O rosa é mais do que uma cor — é um <strong>estado de espírito</strong>, uma escolha que celebra a alegria, a delicadeza e a criatividade. Ele envolve com sua doçura, mas também inspira coragem, originalidade e ousadia.
+      </p>
+      <p>
+        No mundo da literatura, o rosa aparece como símbolo de sonhos e emoções. Em <em>Legalmente Loira</em>, Elle Woods mostra que charme e inteligência podem caminhar juntos, com sua personalidade vibrante marcada pelo amor ao rosa. Em <em>O Pequeno Príncipe</em>, a rosa do planeta do príncipe lembra a importância do cuidado e do afeto, provando que a suavidade também pode ser força.
+      </p>
+      <p>
+        Nos universos da cultura pop, personagens como <em>Aurora</em> (A Bela Adormecida) e <em>Barbie</em> celebram o rosa como marca de identidade, estilo e alegria. No mundo da música, o álbum <em>Lover</em> de Taylor Swift celebra tons suaves e vibrantes de rosa, representando amor, liberdade e leveza, inspirando fãs a abraçar suas emoções com autenticidade.
+      </p>
+      <p>
+        No Pinkology, o rosa é a essência que inspira cada detalhe do site — das cores aos conteúdos, passando por dicas de estilo, design e lifestyle. Escolher o rosa é escolher <strong>ver a vida com leveza, criatividade e encanto</strong>, transformando o cotidiano em algo mágico, moderno e cheio de charme.
+      </p>
+    </div>
+    <div class="about-gallery">
+      <div class="gallery-row">
+        <img src="img/imgs/Aurora.png" alt="Imagem 1">
+        <img src="img/imgs/Taylor - Lover.png" alt="Imagem 2">
+      </div>
+      <div class="gallery-row">
+        <img src="img/imgs/Ursinhos Carinhosos.png" alt="Imagem 3">
+        <img src="img/imgs/Pinkepie.png" alt="Imagem 4">
+      </div>
+      <div class="gallery-row">
+        <img src="img/imgs/Gatinha Marie.png" alt="Imagem 5">
+      </div>
+      <div class="gallery-row"
+>       <img src="img/imgs/Giselle.png" alt="Imagem 6">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pinkology — Seu mundinho rosa</p>
+  </footer>
+  <script>
+    function mostrarPersonagem(id) {
+      document.querySelectorAll('.personagem').forEach(div => div.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+    }
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+});
+</script>
+<audio id="pinkPlayer" preload="auto"></audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎶</button>
+
+<script>
+  // Lista das músicas
+  const playlist = [
+  "músicas/Taylor-Swift-Lover-_Official-Music-Video_.mp3",
+  "músicas/Lovers-[xmSk54-3tlA].mp3",
+  "músicas/Taylor-Swift-Paper-Rings-_Official-Audio_.mp3"
+];
+
+  let currentSong = 0;
+  const player = document.getElementById("pinkPlayer");
+
+  // Toca a primeira música
+  function playMusic() {
+    player.src = playlist[currentSong];
+    player.play();
+  }
+
+  // Botão de play/pause
+  function toggleMusic() {
+    if (player.paused && player.src) {
+      player.play();
+    } else if (player.src) {
+      player.pause();
+    } else {
+      playMusic();
+    }
+  }
+
+  // Quando a música termina → vai para a próxima
+  player.addEventListener("ended", () => {
+    currentSong++;
+    if (currentSong >= playlist.length) {
+      currentSong = 0; // volta ao início da lista
+    }
+    playMusic();
+  });
+</script>
+
+</body>
+</html>

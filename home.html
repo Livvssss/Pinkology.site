@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinkology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="creatiologymenu.css">
+</head>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const dropdown = document.querySelector('.dropdown');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+dropdown.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+  }
+});
+</script>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/imgs/2.png" alt="Logo Pinkology">
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="home.html" target="_blank">Início</a>
+      <a href="about_us.html" target="_blank">Sobre nós</a>
+
+      <div class="dropdown">
+        <a href="creatiology.html" class="dropbtn">Creatiology ▾</a>
+        <div class="dropdown-content">
+          <button onclick="mostrarPersonagem('barbie')">Barbie</button>
+          <button onclick="mostrarPersonagem('marie')">Gatinha Marie</button>
+          <button onclick="mostrarPersonagem('pinkie')">Pinkie Pie</button>
+          <button onclick="mostrarPersonagem('aurora')">Princesa Aurora</button>
+          <button onclick="mostrarPersonagem('penelope charmosa')">Penélope Charmosa</button>
+          <button onclick="mostrarPersonagem('Ursinha Animadinha')">Ursinha Animadinha</button>
+          <button onclick="mostrarPersonagem('pink-books')">Livros Rosa</button>
+        </div>
+      </div>
+
+      <a href="galeria.html" target="_blank">Galeria</a>
+      <a href="Nossa_Playlist.html" target="_blank">Nossa Playlist</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Pinkology</h1>
+      <h2>seu mundinho rosa</h2>
+      <p>Um espaço onde a criatividade floresce em tons de rosa.  
+         Aqui, o charme encontra a imaginação — e tudo é possível em pink!</p>
+      <a href="Creatiology.html"_blank"">
+      <button>Explorar o universo Pink</button>
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/imgs/Pinkpie.png" alt="Imagem representando o universo Pinkology">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pinkology — Seu mundinho rosa</p>
+  </footer>
+  <script>
+    function mostrarPersonagem(id) {
+      document.querySelectorAll('.personagem').forEach(div => div.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+    }
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+
+  if (dropdown) {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+});
+</script>
+<audio id="pinkPlayer" preload="auto"></audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎶</button>
+
+<script>
+  // Lista das músicas
+  const playlist = [
+  "músicas/Taylor-Swift-Lover-_Official-Music-Video_.mp3",
+  "músicas/Lovers-[xmSk54-3tlA].mp3",
+  "músicas/Taylor-Swift-Paper-Rings-_Official-Audio_.mp3"
+];
+
+  let currentSong = 0;
+  const player = document.getElementById("pinkPlayer");
+
+  // Toca a primeira música
+  function playMusic() {
+    player.src = playlist[currentSong];
+    player.play();
+  }
+
+  // Botão de play/pause
+  function toggleMusic() {
+    if (player.paused && player.src) {
+      player.play();
+    } else if (player.src) {
+      player.pause();
+    } else {
+      playMusic();
+    }
+  }
+
+  // Quando a música termina → vai para a próxima
+  player.addEventListener("ended", () => {
+    currentSong++;
+    if (currentSong >= playlist.length) {
+      currentSong = 0; // volta ao início da lista
+    }
+    playMusic();
+  });
+</script>
+
+</body>
+</html>

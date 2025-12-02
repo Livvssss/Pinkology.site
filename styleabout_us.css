@@ -1,0 +1,120 @@
+/* ===================== */
+/* ABOUT US - DUAS COLUNAS */
+/* ===================== */
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #ffe6f0;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+  color: #b3005c;
+}
+
+.about-text h1 {
+  font-family: 'MatchaVibes';
+  font-size: 3.5rem;
+  color: #f36b9f;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* ===================== */
+/* GALERIA DE IMAGENS QUADRADAS */
+/* ===================== */
+
+.about-gallery {
+  flex: 1 1 50%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #ffb6c1;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 12px 25px rgba(255, 20, 147, 0.5);
+  border-color: #ff69b4;
+}
+.about-gallery img {
+  animation: enchantedFloat 9s ease-in-out infinite, softGlow 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+/* ===================== */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .about-text h1 {
+    font-size: 3rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+
+  .about-gallery img {
+    border-width: 3px;
+  }
+}
+
+/* Celulares */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .about-us {
+    flex-direction: column; /* texto em cima, galeria embaixo */
+    padding: 40px 5%;
+  }
+
+  .about-text, .about-gallery {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr 1fr; /* mantém 2x2 em celulares */
+    gap: 10px;
+  }
+
+  .about-gallery img {
+    border-width: 2px;
+    aspect-ratio: 1 / 1; /* mantém quadrado em celulares */
+  }
+}

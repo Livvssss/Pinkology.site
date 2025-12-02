@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'MatchaVibes';
+  src: url('fonts/MatchaVibes.woff2') format('woff2'),
+       url('fonts/MatchaVibes.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffe6f0;
+  color: #b3005c;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffcce0;
+  padding: 15px 5%;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-height: 100px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #b3005c;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ff1493;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 5%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-family: 'MatchaVibes';
+  font-size: 5rem;
+  color: #f36b9f;
+  margin: 0;
+}
+
+.hero-text h2 {
+  font-family: 'MatchaVibes';
+  font-size: 2.5rem;
+  color: #f58bb0;
+  margin: 5px 0 25px;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  color: #b3005c;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #ff1d8e, #ffa0d3);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-text button:hover {
+  background: linear-gradient(90deg, #ff1d8e, #ffa0d3);
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 0, 38, 0.486);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: enchantedFloat 6s ease-in-out infinite, softGlow 3s ease-in-out infinite;
+}
+
+.hero-text button:hover {
+  background-color: #ff0088;
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1 1 50%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #ffcce0;
+  color: #b3005c;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+}
+.music-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: linear-gradient(90deg, #ff6cb5, #ff9cd9);
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.2) rotate(6deg);
+}

@@ -1,0 +1,145 @@
+.menu-toggle {
+  display: none;
+  background: linear-gradient(90deg, #ff1d8e, #ff77c4, #ffbce1);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 14px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.4);
+  transition: transform 0.2s ease;
+}
+.menu-toggle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(255, 20, 147, 0.6);
+}
+
+.dropbtn {
+  text-decoration: none;
+  color: #b3005c;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffe6f0;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content button {
+  background: none;
+  border: none;
+  color: #b3005c;
+  text-align: left;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 10%;
+}
+
+.dropdown-content button:hover {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* ======== TROCA DE CONTEÚDO ======== */
+.personagem {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.personagem.ativo {
+  display: flex !important;
+  height: auto !important;
+  padding: 30px 40px !important; /* ou ajuste menor se quiser */
+}
+/* 📱 Responsivo: Menu em versão hambúrguer */
+@media screen and (max-width: 900px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #ffcce0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a, .dropdown .dropbtn {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    width: 100%;
+    border-radius: none;
+  }
+
+  .dropdown-content button {
+    text-align: center;
+    background: none;
+    border-bottom: 1px solid #ff99c98a;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: flex;
+  }
+}
+
+/* Quando o menu abre */
+.menu.show a,
+.menu.show .dropbtn,
+.dropdown.open .dropdown-content button {
+  background-image: radial-gradient(circle,
+    rgba(255, 182, 193, 0.8) 20%,
+    rgba(255, 105, 180, 0.3) 40%,
+    transparent 60%);
+  background-size: 200% 200%;
+  animation: glitterPink 3s infinite ease-in-out;
+  transition: all 0.3s ease;
+  border-radius: 100px;
+}
+
+/* Suavizando o hover para combinar */
+.menu a:hover,
+.dropdown-content button:hover {
+  background-image: radial-gradient(circle,
+    rgba(255, 105, 180, 0.8) 20%,
+    rgba(255, 182, 193, 0.5) 40%,
+    transparent 60%);
+  transform: scale(1.06);
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Matcha Vibes';
+    src: url('MatchaVibes.woff2') format('woff2'),
+        url('MatchaVibes.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
