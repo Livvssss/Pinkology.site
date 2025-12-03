@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'MatchaVibes';
-  src: url('fonts/MatchaVibes.woff2') format('woff2'),
-       url('fonts/MatchaVibes.ttf') format('truetype');
+  src: url('Fonts/MatchaVibes.woff2') format('woff2'),
+       url('Fonts/MatchaVibes.woff') format('truetype');
 }
 
 body {
